@@ -1,4 +1,5 @@
 import uuid
+import datetime
 
 from django.db import models
 from django.contrib.auth.models import User
@@ -62,5 +63,8 @@ class Invitation(models.Model):
             email.attach_alternative(html_body, "text/html")
 
         email.send()
+
+        self.send_at = datetime.datetime.now()
+        self.save()
 
 connect_hooks(Invitation)

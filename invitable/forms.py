@@ -5,7 +5,7 @@ from invitable.models import Invitation
 
 INVITABLE_DEFAULT_ACCOUNT_TYPES = {
     'admin': 'Admin',
-    'team member': 'Team Member',
+    'team': 'Team Member',
     'client': 'Client'
 }
 
