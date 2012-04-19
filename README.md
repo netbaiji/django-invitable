@@ -7,6 +7,10 @@ Handles invitations based sign up for Django
   * Django admin integration
   * Custom registration (using invite token) - work in progress
 
+#Getting it
+  * Get it from `easy_install`: `sudo easy_install django-invitable`
+  * Get it from `git`: `git clone git://github.com/teodor-pripoae/django-invitable.git`
+
 #Installation
   * Add `django-invitable` directory to your Python path.
   * Add `invitable` to your INSTALLED_APPS tuple found in your settings file.

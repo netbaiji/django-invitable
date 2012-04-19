@@ -12,3 +12,6 @@ public/static/*
 .achievements
 whoosh_index
 celerybeat-schedule
+build
+dist
+django_invitable.egg-info
