@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "Send invitation" %}
+{% endblock %}
+
+{% block content %}
+  <h1>{% trans "Send invitation" %}</h1>
+
+  <form action="{% url invitable_form %}" method="post" accept-charset="utf-8">
+    {% csrf_token %}
+    {{ form.errors }}
+
+    <div class="row">
+      <label for="email">Email</label>
+      <input type="text" name="email" value="{{ form.data.email }}" placeholder="Email address"/>
+    </div>
+
+    <div class="row">
+      <label for="account_type">Account type</label>
+      <select name="account_type">
+        {% for type, long_type in account_types.iteritems %}
+        <option value="{{ type }}">{{ long_type }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="row">
+      <input type="submit" name="send" value="Send"/></p>
+    </div>
+  </form>
+{% endblock %}
