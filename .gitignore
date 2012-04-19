@@ -1,0 +1,14 @@
+*.pyc
+settings.py
+.*.swp
+db.sqlite
+db/dev.sqlite3
+media/*
+tmp/*
+config/databases.py
+log/*
+public/static/*
+*nohup.out
+.achievements
+whoosh_index
+celerybeat-schedule
